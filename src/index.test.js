@@ -1,7 +1,7 @@
-import { ExampleComponent } from '.'
+import CustomCursor from '.';
 
-describe('ExampleComponent', () => {
+describe('CustomCursor', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
-  })
-})
+    expect(CustomCursor).toBeTruthy();
+  });
+});
