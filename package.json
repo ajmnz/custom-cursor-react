@@ -1,10 +1,21 @@
 {
   "name": "custom-cursor-react",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Interactive and customizable cursor component for React",
   "author": "ajmnz",
   "license": "MIT",
-  "repository": "ajmnz/custom-cursor-react",
+  "homepage": "https://ajmnz.github.io/custom-cursor-react",
+  "repository": "https://github.com/ajmnz/custom-cursor-react",
+  "keywords": [
+    "react",
+    "cursor",
+    "react custom cursor",
+    "react cursor",
+    "react interactive cursor",
+    "custom cursor",
+    "interactive cursor",
+    "animated cursor"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
