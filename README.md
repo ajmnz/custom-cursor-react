@@ -1,7 +1,11 @@
 <h2 align='center'>React Custom Cursor 🎉</h2>
 <p align='center'>Animated, customizable and interactive cursor for React</p>
 <div align='center'>
-  <img src='https://raw.githubusercontent.com/ajmnz/custom-cursor-react/master/screenshots/custom-cursor-react.gif' width='100%'>
+<img src='https://travis-ci.com/ajmnz/custom-cursor-react.svg?branch=master'>
+</div>
+
+<div align='center'>
+  [![npm](https://img.shields.io/npm/v/custom-cursor-react.svg)](https://www.npmjs.com/package/custom-cursor-react) [![npm](https://img.shields.io/npm/dm/custom-cursor-react)](https://www.npmjs.com/package/custom-cursor-react) [![Build](https://travis-ci.com/ajmnz/custom-cursor-react.svg?branch=master)](https://travis-ci.com/github/ajmnz/custom-cursor-react)
 </div>
 
 ## Installation
