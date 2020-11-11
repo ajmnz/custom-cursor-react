@@ -19,10 +19,11 @@ $ npm install custom-cursor-react
 [Live Demo](https://ajmnz.github.io/custom-cursor-react)
 
 ## Usage
-Import the component
+Import the component and styles
 
 ```javascript
 import CustomCursor from 'custom-cursor-react';
+import 'custom-cursor-react/dist/index.css';
 ```
 
 Include it in your App
@@ -66,3 +67,5 @@ All of them are optional.
 | **`targetScale`**   | number           | Scale of the cursor when hovering the `targets`                                   | 4             |
 
 
+
+> This component is a refactor of a project by Mary Low available [here](https://github.com/codrops/AnimatedCustomCursor/).
