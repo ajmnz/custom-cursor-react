@@ -29,7 +29,7 @@ Include it in your App
 
 ```jsx
 const App = () => (
-  <>
+  <div>
     <CustomCursor
       targets={['.link', '.your-css-selector']}
       customClass='custom-cursor'
@@ -42,7 +42,7 @@ const App = () => (
       }}
       targetOpacity={0.5}
     />
-  </>
+  </div>
 );
 ```
 
