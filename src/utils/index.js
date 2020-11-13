@@ -4,13 +4,13 @@ const addHoverEvent = (cursor, targets) => {
 
   if (Array.isArray(targets)) {
     targets.forEach((target) => {
-      [...document.querySelectorAll(target)].forEach((el) => {
+      [].forEach.call(document.querySelectorAll(target), (el) => {
         el.addEventListener('mouseenter', cursor.enter);
         el.addEventListener('mouseleave', cursor.leave);
       });
     });
   } else {
-    [...document.querySelectorAll(targets)].forEach((el) => {
+    [].forEach.call(document.querySelectorAll(targets), (el) => {
       el.addEventListener('mouseenter', cursor.enter);
       el.addEventListener('mouseleave', cursor.leave);
     });
@@ -22,13 +22,13 @@ const removeHoverEvent = (cursor, targets) => {
 
   if (Array.isArray(targets)) {
     targets.forEach((target) => {
-      [...document.querySelectorAll(target)].forEach((el) => {
+      [].forEach.call(document.querySelectorAll(target), (el) => {
         el.removeEventListener('mouseenter', cursor.enter);
         el.removeEventListener('mouseleave', cursor.leave);
       });
     });
   } else {
-    [...document.querySelectorAll(targets)].forEach((el) => {
+    [].forEach.call(document.querySelectorAll(targets), (el) => {
       el.removeEventListener('mouseenter', cursor.enter);
       el.removeEventListener('mouseleave', cursor.leave);
     });

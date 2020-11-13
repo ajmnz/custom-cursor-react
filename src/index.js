@@ -7,7 +7,7 @@ import {
   removeHoverEvent, removeWindowEvent,
 } from './utils';
 
-import './CustomCursor.css';
+import styles from './styles.module.css';
 
 const CustomCursor = ({
   targets,
@@ -45,7 +45,7 @@ const CustomCursor = ({
   }, [opacity, ref, smoothness, targetOpacity, targetScale, targets]);
 
   return (
-    <div className='cursor'>
+    <div className={styles.cursor}>
       <svg
         ref={ref}
         className={customClass}
