@@ -2,7 +2,7 @@
   "extends": ["config:base", ":disableRateLimiting"],
   "schedule": ["at any time"],
   "semanticCommits": "enabled",
-  "baseBranches": ["dev"],
+  "baseBranches": ["master"],
   "rebaseWhen": "conflicted",
   "dependencyDashboard": true,
   "packageRules": [
