@@ -1,67 +1,83 @@
 {
-  "name": "custom-cursor-react",
-  "version": "1.0.5",
-  "description": "Interactive and customizable cursor component for React",
-  "author": "ajmnz",
-  "license": "MIT",
-  "homepage": "https://ajmnz.github.io/custom-cursor-react",
-  "repository": "https://github.com/ajmnz/custom-cursor-react",
-  "keywords": [
-    "react",
-    "cursor",
-    "react custom cursor",
-    "react cursor",
-    "react interactive cursor",
-    "custom cursor",
-    "interactive cursor",
-    "animated cursor"
-  ],
-  "main": "dist/index.js",
-  "module": "dist/index.modern.js",
-  "source": "src/index.js",
-  "engines": {
-    "node": ">=10"
-  },
-  "scripts": {
-    "build": "microbundle-crl --no-compress --format modern,cjs",
-    "start": "microbundle-crl watch --no-compress --format modern,cjs",
-    "prepare": "run-s build",
-    "test": "run-s test:unit test:lint test:build",
-    "test:build": "run-s build",
-    "test:lint": "eslint .",
-    "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
-    "test:watch": "react-scripts test --env=jsdom",
-    "predeploy": "cd homepage && npm install && npm run build",
-    "deploy": "gh-pages -d homepage/build"
-  },
-  "peerDependencies": {
-    "react": "^16.0.0 || ^17.0.0",
-    "gsap": "^3.5.1",
-    "prop-types": "^15.7.2"
-  },
-  "devDependencies": {
-    "cross-env": "7.0.3",
-    "eslint": "7.32.0",
-    "eslint-config-airbnb": "18.2.1",
-    "eslint-config-standard": "14.1.1",
-    "eslint-config-standard-react": "11.0.1",
-    "eslint-plugin-import": "2.24.0",
-    "eslint-plugin-jsx-a11y": "6.4.1",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-promise": "5.1.0",
-    "eslint-plugin-react": "7.24.0",
-    "eslint-plugin-react-hooks": "4.2.0",
-    "eslint-plugin-standard": "4.1.0",
-    "gh-pages": "3.2.3",
-    "gsap": "3.7.1",
-    "microbundle-crl": "0.13.11",
-    "npm-run-all": "4.1.5",
-    "prop-types": "15.7.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-scripts": "4.0.3"
-  },
-  "files": [
-    "dist"
-  ]
+	"name": "custom-cursor-react",
+	"version": "0.1.0",
+	"description": "Interactive and customizable cursor component for React",
+	"author": "ajmnz",
+	"license": "MIT",
+	"main": "dist/index.js",
+	"typings": "dist/index.d.ts",
+	"homepage": "https://ajmnz.github.io/custom-cursor-react",
+	"repository": "https://github.com/ajmnz/custom-cursor-react",
+	"keywords": [
+		"react",
+		"cursor",
+		"react custom cursor",
+		"react cursor",
+		"react interactive cursor",
+		"custom cursor",
+		"interactive cursor",
+		"animated cursor"
+	],
+	"files": [
+		"dist",
+		"src"
+	],
+	"engines": {
+		"node": ">=10"
+	},
+	"module": "dist/custom-cursor-react.esm.js",
+	"scripts": {
+		"start": "tsdx watch",
+		"build": "tsdx build",
+		"test": "tsdx test --passWithNoTests",
+		"lint": "tsdx lint",
+		"prepare": "tsdx build",
+		"size": "size-limit",
+		"analyze": "size-limit --why"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "tsdx lint"
+		}
+	},
+	"prettier": {
+		"trailingComma": "es5",
+		"tabWidth": 2,
+		"semi": true,
+		"singleQuote": false,
+		"arrowParens": "always",
+		"useTabs": true
+	},
+	"size-limit": [
+		{
+			"path": "dist/custom-cursor-react.cjs.production.min.js",
+			"limit": "10 KB"
+		},
+		{
+			"path": "dist/custom-cursor-react.esm.js",
+			"limit": "10 KB"
+		}
+	],
+	"jest": {
+		"moduleNameMapper": {
+			"\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+			"\\.(css|less)$": "identity-obj-proxy"
+		}
+	},
+	"devDependencies": {
+		"@size-limit/preset-small-lib": "^5.0.2",
+		"@types/react": "^17.0.16",
+		"@types/react-dom": "^17.0.9",
+		"husky": "^7.0.1",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"rollup-plugin-static-files": "^0.2.0",
+		"size-limit": "^5.0.2",
+		"tsdx": "^0.14.1",
+		"tslib": "^2.3.0",
+		"typescript": "^4.3.5"
+	},
+	"peerDependencies": {
+		"react": ">=16"
+	}
 }
