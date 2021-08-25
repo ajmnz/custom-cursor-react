@@ -1,6 +1,6 @@
 {
   "extends": ["config:base", ":disableRateLimiting"],
-  "schedule": ["at any time"],
+  "schedule": ["on the first day of the month"],
   "semanticCommits": "enabled",
   "baseBranches": ["master"],
   "rebaseWhen": "conflicted",
